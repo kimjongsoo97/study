@@ -5,6 +5,9 @@ public class VariableExchangeExample {
         int x=3;
     int y=5;
         System.out.println("x:" +x+" y:" +y);
+
+//        x=y라고 값을 대입하면 x와 y가 같은 값이 되기때문에 swap불가능
+//        임시값인 temp를 만들어서 x의 값을 담아둔다.
         int temp=x;
         x=y;
         y=temp;
