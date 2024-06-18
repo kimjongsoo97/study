@@ -13,18 +13,28 @@ public class l3quiz {
             System.out.println("----------------------");
             System.out.println("선택");
             String strNum = scanner.nextLine();
-            int num = Integer.parseInt(strNum);
-            if(strNum.equals("1")){
-
+            int num= Integer.parseInt(strNum);
+            if(num==1){
+                System.out.println("예금액을 입력하세요");
                 System.out.println("예금액>"+strNum);
+                int depositAmount=Integer.parseInt(scanner.nextLine());
+                i+=depositAmount;
+                System.out.println("현재잔고:"+i);
 
 
-            } else if (strNum.equals("2")) {
+            } else if (num==2){ int withdraw=Integer.parseInt(scanner.nextLine());
+                {if (withdraw<i){
+                System.out.println("출금액부족");
 
-                System.out.println("출금액>"+strNum);
-            } else if (strNum.equals("3")) {
+            }else {i-=withdraw;
+                    System.out.println("현재잔고:"+i);
 
-                System.out.println("잔고>"+strNum);
+            }
+            }
+
+            } else if (num==3) {
+
+                System.out.println("잔고>"+i);
 
             }else if(strNum.equals("4")){
                 run=false;System.out.println("프로그램 종료");
