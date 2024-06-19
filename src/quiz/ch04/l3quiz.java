@@ -23,7 +23,7 @@ public class l3quiz {
 
 
             } else if (num==2){ int withdraw=Integer.parseInt(scanner.nextLine());
-                {if (withdraw<i){
+                {if (withdraw>=i){
                 System.out.println("출금액부족");
 
             }else {i-=withdraw;
