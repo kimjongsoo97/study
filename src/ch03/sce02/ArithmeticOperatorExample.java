@@ -10,6 +10,7 @@ public class ArithmeticOperatorExample {
         int result1=v1+v2;
         System.out.println("result1 = " + result1);
 
+
         long result2=v1+v2-v4;
         System.out.println("result2 = " + result2);
 
