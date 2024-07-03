@@ -4,6 +4,7 @@ public class LambdaExample {
     public static void main(String[] args) {
         Person person = new Person();
         //실행문이 두개 이상인 경우 중괄호 필요
+        //실제로는 Workable내의 work()로 람다식이 들어간다.
         person.action(()->{
             System.out.println("출근을 합니다");
             System.out.println("프로그래밍을 합니다");

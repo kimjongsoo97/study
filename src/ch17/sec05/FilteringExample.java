@@ -12,16 +12,18 @@ public class FilteringExample {
         list.add("감자바");
         list.add("신용권");
         list.add("신민철");
-        //중복요소 제거
+        //distinct():중복요소 제거
         list.stream()
                 .distinct()
                 .forEach(n -> System.out.println(n));
         System.out.println();
-        //신으로 시작하는 요소만 필터링
+        //startsWith(글자):해당 글자로 시작하는지 여부반환
+        // 신으로 시작하는 요소만 필터링
         list.stream()
                 .filter(n -> n.startsWith("신"))
                 .forEach(n -> System.out.println(n));
         System.out.println();
+        //distinct와 startsWith를 모두사용
         //중복 요소를 먼저 제거하고, 신으로 시작하는 요소만 필터링
         list.stream()
                 .distinct()

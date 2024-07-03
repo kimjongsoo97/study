@@ -11,8 +11,9 @@ public class StreamExample {
         set.add("홍길동");
         set.add("신용권");
         set.add("김자바");
-        //Stream을 이용한 요소 반복 처리
+        //Stream을 이용한 요소 반복 처리(set을 Stream으로 변환해서 저장)
         Stream<String> stream = set.stream();
+        //Stream을 돌면서 요소를 name이란 이름으로 가져와서 출력
         stream.forEach(name -> System.out.println(name));
     }
 }
