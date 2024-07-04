@@ -1,5 +1,5 @@
 package ch17.sec07.exam01;
-
+//Comparable 인터페이스를 구현받으면 compareTo를 무조건 구현해야한ㄷ.
 public class Student implements Comparable<Student> {
     private String name;
     private int score;

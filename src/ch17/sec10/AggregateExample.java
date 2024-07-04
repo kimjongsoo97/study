@@ -7,6 +7,7 @@ public class AggregateExample {
         //정수 배열
         int[] arr = {1, 2, 3, 4, 5};
         //카운팅
+        //count: 요소들의 개수를 long으로 반환
         long count = Arrays.stream(arr)
                 .filter(n->n%2==0)
                 .count();
@@ -17,23 +18,27 @@ public class AggregateExample {
                 .sum();
         System.out.println("2의 배수의 합: "+sum);
         //평균
+        //average: 요소들의 평균을 OptionalDouble로 반환함 , double로 변경해줘야댐
         double avg=Arrays.stream(arr)
                 .filter(n->n%2==0)
                 .average()
                 .getAsDouble();
         System.out.println("2의 배수의 평균:"+avg);
         //최대값
+        //max: 요소중 최대값을 OptionalInt로 반환, int로 변경필요
         int max=Arrays.stream(arr)
                 .filter(n->n%2==0)
                 .max()
                 .getAsInt();
         System.out.println("최대 값:"+max);
         //최소값
+        //min: 요소중 최소값을 OptionalInt로반환, int로 변경필요
         int min=Arrays.stream(arr)
                 .filter(n->n%2==0)
                 .min().getAsInt();
         System.out.println("최소값 :"+min);
         //첫번째 요소
+        //findFirst(): 해당하는 요소들의 첫번째값을 optionalInt로 반환, int로 변경필요
         int first=Arrays.stream(arr)
                 .filter(n->n%3==0)
                 .findFirst()

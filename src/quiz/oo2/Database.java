@@ -1,6 +1,6 @@
 package quiz.oo2;
 
-public class Database {
+public class Database  {
     private String connection="MySQL";
 
     public String connect() {
@@ -11,4 +11,5 @@ public class Database {
     public void close() {
         System.out.println(connection+"을닫습니다");
     }
+
 }
