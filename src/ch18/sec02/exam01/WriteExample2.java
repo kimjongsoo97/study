@@ -6,7 +6,8 @@ import java.io.OutputStream;
 
 public class WriteExample2 {
     public static void main(String[] args) {
-        try(OutputStream os=new FileOutputStream("C:/temp/test1.db")){
+        //try문 안쪽에 출력 스트림을 만들어주면 close할 필요없잉 자동으로 닫힌다
+        try(OutputStream os=new FileOutputStream("C:/Temp/test1.db")){
 
 
             byte a=10;

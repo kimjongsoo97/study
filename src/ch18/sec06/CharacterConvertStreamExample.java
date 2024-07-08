@@ -12,7 +12,9 @@ public class CharacterConvertStreamExample {
         System.out.println(data);
 
     }public static void write(String str) throws Exception {
+        //해당경로를 가진 출력 스트림을 만들어줌
         OutputStream os = new FileOutputStream("C:/Temp/test.txt");
+       //바이트 스트림을 문자열 스트림으로 사용하기 위해 보조스트림으로 연결해줌
         Writer writer=new OutputStreamWriter(os,"UTF-8");
         writer.write(str);
         writer.flush();
@@ -20,7 +22,9 @@ public class CharacterConvertStreamExample {
 
     }
     public static String read() throws Exception {
+        //해당 경로를 가진 바이트 입력 스트림을 만들어줌
         InputStream is = new FileInputStream("C:/Temp/test.txt");
+        //바이트 스트림을 문자열 스트리므로 사용하기 위해 보조스트림을 연결해줌
         Reader reader = new InputStreamReader(is,"UTF-8");
         char[] data = new char[100];
         int num=reader.read(data);

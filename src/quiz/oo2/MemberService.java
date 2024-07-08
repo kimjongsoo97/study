@@ -16,9 +16,6 @@ public class MemberService {
             System.out.println("id 또는 password가 올바르지 않습니다");
         }
 
-
-
-
     }
 
     private boolean login(String id, int age) {

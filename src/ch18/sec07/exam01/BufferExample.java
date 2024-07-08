@@ -34,15 +34,19 @@ public class BufferExample {
     }
 
     private static long copy(InputStream is, OutputStream os)throws Exception {
+        // 시작시간 고정
         long start=System.nanoTime();
-
+        //1바이트를 읽고 1바이트를 출력
+        //입력경로에서 받아온 데이터를 그대로 출력경로에씀
         while (true) {
             int data=is.read();
             if(data==-1) break;
             os.write(data);
         }
         os.flush();
+        //끝시간 저정
         long end=System.nanoTime();
+        //복사 시간 리턴(끝시간 - 시작시간 = 총걸린시간)
         return (end-start);
     }
 }

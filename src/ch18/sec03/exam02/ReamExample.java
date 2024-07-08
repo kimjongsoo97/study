@@ -18,8 +18,10 @@ public class ReamExample {
                 }
             }
         }catch(FileNotFoundException e){
+            //파일을 제대로 찾지 못했을 경우 예외처리
             e.printStackTrace();
         }catch(IOException e){
+            // 입출력이 제대로 동작하지 않았을 경우 예외처리
             e.printStackTrace();
         }
     }
